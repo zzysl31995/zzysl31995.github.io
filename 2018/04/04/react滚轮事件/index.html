@@ -3,25 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>React 组件生命周期 | zzy‘Blog</title>
+  <title>React 添加滚轮事件 | zzy‘Blog</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="React 组件生命周期">
+  <meta name="description" content="React 添加滚轮事件1234567891011121314151617181920212223// 初始化函数  constructor (props) &amp;#123;    super(props)    // 滚轮事件绑定 this   this.handleScroll = this.handleScroll.bind(this)  &amp;#125;// 组件已经挂载  componentD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React 组件生命周期">
-<meta property="og:url" content="https://github.com/zzysl31995/zzysl31995.github.io.git/2018/04/04/lifeCycle/index.html">
+<meta property="og:title" content="React 添加滚轮事件">
+<meta property="og:url" content="https://github.com/zzysl31995/zzysl31995.github.io.git/2018/04/04/react滚轮事件/index.html">
 <meta property="og:site_name" content="zzy‘Blog">
-<meta property="og:description" content="React 组件生命周期">
+<meta property="og:description" content="React 添加滚轮事件1234567891011121314151617181920212223// 初始化函数  constructor (props) &amp;#123;    super(props)    // 滚轮事件绑定 this   this.handleScroll = this.handleScroll.bind(this)  &amp;#125;// 组件已经挂载  componentD">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://image-1255851966.cos.ap-beijing.myqcloud.com/gitHubPicture/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE.png">
-<meta property="og:updated_time" content="2018-04-04T01:30:08.000Z">
+<meta property="og:updated_time" content="2018-04-04T03:36:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React 组件生命周期">
-<meta name="twitter:description" content="React 组件生命周期">
-<meta name="twitter:image" content="https://image-1255851966.cos.ap-beijing.myqcloud.com/gitHubPicture/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE.png">
+<meta name="twitter:title" content="React 添加滚轮事件">
+<meta name="twitter:description" content="React 添加滚轮事件1234567891011121314151617181920212223// 初始化函数  constructor (props) &amp;#123;    super(props)    // 滚轮事件绑定 this   this.handleScroll = this.handleScroll.bind(this)  &amp;#125;// 组件已经挂载  componentD">
   
     <link rel="alternative" href="/atom.xml" title="zzy‘Blog" type="application/atom+xml">
   
@@ -167,11 +165,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-lifeCycle" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-react滚轮事件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/04/04/lifeCycle/" class="article-date">
-  	<time datetime="2018-04-04T01:30:08.000Z" itemprop="datePublished">2018-04-04</time>
+      <a href="/2018/04/04/react滚轮事件/" class="article-date">
+  	<time datetime="2018-04-04T03:34:20.000Z" itemprop="datePublished">2018-04-04</time>
 </a>
     </div>
   
@@ -184,7 +182,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      React 组件生命周期
+      React 添加滚轮事件
       
     </h1>
   
@@ -203,7 +201,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h1 id="React-组件生命周期"><a href="#React-组件生命周期" class="headerlink" title="React 组件生命周期"></a>React 组件生命周期</h1><p><img src="https://image-1255851966.cos.ap-beijing.myqcloud.com/gitHubPicture/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE.png" alt=""> </p>
+<h1 id="React-添加滚轮事件"><a href="#React-添加滚轮事件" class="headerlink" title="React 添加滚轮事件"></a>React 添加滚轮事件</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化函数  </span></span><br><span class="line"><span class="keyword">constructor</span> (props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="comment">// 滚轮事件绑定 this</span></span><br><span class="line">   <span class="keyword">this</span>.handleScroll = <span class="keyword">this</span>.handleScroll.bind(<span class="keyword">this</span>)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 组件已经挂载</span></span><br><span class="line">  componentDidMount () &#123;</span><br><span class="line">    <span class="comment">// 添加监听</span></span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>, <span class="keyword">this</span>.handleScroll)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 组件将要卸载</span></span><br><span class="line">  componentWillUnmount () &#123;</span><br><span class="line">    <span class="comment">// 移除监听</span></span><br><span class="line">    <span class="built_in">window</span>.removeEventListener(<span class="string">'scroll'</span>, <span class="keyword">this</span>.handleScroll)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 监听触发的事件</span></span><br><span class="line">  handleScroll (event) &#123;</span><br><span class="line">    <span class="comment">// 滚动条距离顶部的偏移量  </span></span><br><span class="line">    <span class="keyword">let</span> scrollTop = event.path[<span class="number">1</span>].pageYOffset</span><br><span class="line">    <span class="comment">// 这里可以尝试打印 event.path </span></span><br><span class="line">    <span class="built_in">console</span>.log(event.path)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://zzysl31995.github.io/2018/04/04/lifeCycle/" target="_blank" rel="noopener">react 生命周期</a> </p>
 
       
     </div>
@@ -213,18 +212,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/04/04/react滚轮事件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">&lt;</strong>
-      <div class="article-nav-title">
-        
-          React 添加滚轮事件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/03/三级联动城市选择器/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字符串解析成JSON数据+三级联动的城市选择器</div>
+    <a href="/2018/04/04/lifeCycle/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React 组件生命周期</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
@@ -234,7 +224,7 @@
 </article>
 
 
-<div class="ds-share share" data-thread-key="lifeCycle" data-title="React 组件生命周期" data-url="https://github.com/zzysl31995/zzysl31995.github.io.git/2018/04/04/lifeCycle/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="React 组件生命周期">
+<div class="ds-share share" data-thread-key="react滚轮事件" data-title="React 添加滚轮事件" data-url="https://github.com/zzysl31995/zzysl31995.github.io.git/2018/04/04/react滚轮事件/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="React 添加滚轮事件">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
       	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>

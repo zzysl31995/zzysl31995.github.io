@@ -166,6 +166,63 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-react滚轮事件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/04/04/react滚轮事件/" class="article-date">
+  	<time datetime="2018-04-04T03:34:20.000Z" itemprop="datePublished">2018-04-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/04/react滚轮事件/">
+        React 添加滚轮事件
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="React-添加滚轮事件"><a href="#React-添加滚轮事件" class="headerlink" title="React 添加滚轮事件"></a>React 添加滚轮事件</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化函数  </span></span><br><span class="line"><span class="keyword">constructor</span> (props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="comment">// 滚轮事件绑定 this</span></span><br><span class="line">   <span class="keyword">this</span>.handleScroll = <span class="keyword">this</span>.handleScroll.bind(<span class="keyword">this</span>)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 组件已经挂载</span></span><br><span class="line">  componentDidMount () &#123;</span><br><span class="line">    <span class="comment">// 添加监听</span></span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>, <span class="keyword">this</span>.handleScroll)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 组件将要卸载</span></span><br><span class="line">  componentWillUnmount () &#123;</span><br><span class="line">    <span class="comment">// 移除监听</span></span><br><span class="line">    <span class="built_in">window</span>.removeEventListener(<span class="string">'scroll'</span>, <span class="keyword">this</span>.handleScroll)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 监听触发的事件</span></span><br><span class="line">  handleScroll (event) &#123;</span><br><span class="line">    <span class="comment">// 滚动条距离顶部的偏移量  </span></span><br><span class="line">    <span class="keyword">let</span> scrollTop = event.path[<span class="number">1</span>].pageYOffset</span><br><span class="line">    <span class="comment">// 这里可以尝试打印 event.path </span></span><br><span class="line">    <span class="built_in">console</span>.log(event.path)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://zzysl31995.github.io/2018/04/04/lifeCycle/" target="_blank" rel="noopener">react 生命周期</a> </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-lifeCycle" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
