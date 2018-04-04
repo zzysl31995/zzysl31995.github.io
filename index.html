@@ -279,6 +279,97 @@
 
 
   
+    <article id="post-Git相关操作" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/01/Git相关操作/" class="article-date">
+  	<time datetime="2018-03-01T08:53:42.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git-相关操作"><a href="#git-相关操作" class="headerlink" title="git 相关操作"></a>git 相关操作</h1><h3 id="init-初始化-git仓库"><a href="#init-初始化-git仓库" class="headerlink" title="init 初始化   .git仓库"></a>init 初始化   <code>.git</code>仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<h3 id="remote-远程地址"><a href="#remote-远程地址" class="headerlink" title="remote 远程地址"></a>remote 远程地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add 远程名(随便起) 远程仓库url</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:zzysl31995/Test2.git</span><br></pre></td></tr></table></figure>
+<ol>
+<li><h3 id="clone-（https模式下）"><a href="#clone-（https模式下）" class="headerlink" title="clone  （https模式下）"></a>clone  （https模式下）</h3></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/zzysl31995/GitTest.git</span><br></pre></td></tr></table></figure>
+<ol>
+<li><h3 id="status-查询当前git的状态-和一些操作（）"><a href="#status-查询当前git的状态-和一些操作（）" class="headerlink" title="status 查询当前git的状态,和一些操作（）"></a>status 查询当前git的状态,和一些操作（）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<p>内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">git status        </span><br><span class="line">On branch master</span><br><span class="line">Your branch is up-to-date with &apos;origin/master&apos;.</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line"></span><br><span class="line">	modified:   README.md</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line"></span><br><span class="line">	index.js</span><br><span class="line">	src/</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+<p>​</p>
+<p>⚠️：git 会忽略空文件夹</p>
+<p>如果你创建了空文件夹 <code>status</code>不会追踪到，如果真的想要保留下来  可以在空文件夹中加入<code>.gitkeep</code>文件</p>
+<p>.DS_Store 是Mac系统 存储文件夹的自定义属性信息, 可以用<code>gitignore</code>文件忽略掉</p>
+<p>在.gitignore 文件中添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#Mac</span><br><span class="line">.DS_Store</span><br></pre></td></tr></table></figure>
+<p>⚠️：.gitignore只能忽略未追踪过的文件</p>
+</li>
+<li><h3 id="add-添加修改到暂存取"><a href="#add-添加修改到暂存取" class="headerlink" title="add 添加修改到暂存取"></a>add 添加修改到暂存取</h3><p>添加修改／追踪到暂存区</p>
+<p>单文件：添加index.js的变化到暂存区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add index.js</span><br></pre></td></tr></table></figure>
+<p>多文件：添加多文件变化到暂存区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br></pre></td></tr></table></figure>
+<p>简化：添加所有变化到暂存区</p>
+</li>
+<li><h3 id="checkout-撤回"><a href="#checkout-撤回" class="headerlink" title="checkout 撤回"></a>checkout 撤回</h3><p>检出文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout .gitignore</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="commit-提交"><a href="#commit-提交" class="headerlink" title="commit 提交"></a>commit 提交</h3><p>将暂存区中的所有修改提交到本地分支（本地版本库）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &apos;我修改了一些文件&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="log-查看commit-详情信息"><a href="#log-查看commit-详情信息" class="headerlink" title="log 查看commit 详情信息"></a>log 查看commit 详情信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+<p>如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">commit c2eaa6bc1a514862024c03780ed225ac2f2423e1</span><br><span class="line">Author: dllo &lt;dllo@zhaoziyi.local&gt;</span><br><span class="line">Date:   Wed Feb 28 11:51:02 2018 +0800</span><br><span class="line"></span><br><span class="line">    update: add file &amp;&amp; modified file</span><br><span class="line"></span><br><span class="line">commit 06dede5d1ed828bd761f1effdb0f92e3293b2e8f</span><br><span class="line">Author: zzysl31995 &lt;34641393+zzysl31995@users.noreply.github.com&gt;</span><br><span class="line">Date:   Wed Feb 28 10:53:07 2018 +0800</span><br><span class="line"></span><br><span class="line">    Initial commit</span><br></pre></td></tr></table></figure>
+<p>⚠️：按下<code>q</code> 推出</p>
+<p>​</p>
+</li>
+<li><h3 id="pull-拉取"><a href="#pull-拉取" class="headerlink" title="pull 拉取"></a>pull 拉取</h3><p>从远程仓库拉取代码与本地同步</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<p>等同于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch &amp;&amp; git merge</span><br></pre></td></tr></table></figure>
+<p>⚠️：同一文件同时修改会出现冲突 解决对应冲突</p>
+<p>解决方式：根据情况保留代码 删掉所有多余的代码</p>
+</li>
+<li><h3 id="push-上传-推送"><a href="#push-上传-推送" class="headerlink" title="push 上传 推送"></a>push 上传 推送</h3><p>将本地修改提交到远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-三级联动城市选择器" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
