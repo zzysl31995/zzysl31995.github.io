@@ -166,6 +166,47 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-lifeCycle" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/04/04/lifeCycle/" class="article-date">
+  	<time datetime="2018-04-04T01:20:10.000Z" itemprop="datePublished">2018-04-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="React-组件生命周期"><a href="#React-组件生命周期" class="headerlink" title="React 组件生命周期"></a>React 组件生命周期</h1><p><img src="https://image-1255851966.cos.ap-beijing.myqcloud.com/gitHubPicture/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE.png" alt=""> </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-三级联动城市选择器" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -291,97 +332,6 @@
 <p><a href="http://cssnext.io/setup/" target="_blank" rel="noopener">cssnext</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install postcss postcss-cssnext</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">processors: [</span><br><span class="line">                   require(&apos;autoprefixer&apos;)(),</span><br><span class="line">                   require(&apos;cssnext&apos;)(),</span><br><span class="line">                   require(&apos;precss&apos;)()</span><br><span class="line">               ]</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-LESS SASS stylus 比较" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/01/21/LESS SASS stylus 比较/" class="article-date">
-  	<time datetime="2018-01-21T08:51:44.000Z" itemprop="datePublished">2018-01-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/21/LESS SASS stylus 比较/">
-        谁是你心中CSS的英雄
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h1 id="谁是你心中CSS的英雄－－stylus❓-less-❓sass❓"><a href="#谁是你心中CSS的英雄－－stylus❓-less-❓sass❓" class="headerlink" title="谁是你心中CSS的英雄－－stylus❓ less ❓sass❓"></a>谁是你心中CSS的英雄－－stylus❓ less ❓sass❓</h1><h3 id="什么是css与处理器❓"><a href="#什么是css与处理器❓" class="headerlink" title="什么是css与处理器❓"></a>什么是css与处理器❓</h3><p>​           <strong>百度上是这样解释的</strong>：CSS 预处理器用一种专门的编程语言，进行 Web 页面样式设计，然后再编译成正常的 CSS 文件，以供项目使用。CSS 预处理器为 CSS 增加一些编程的特性，无需考虑浏览器的兼容性问题”，可以在 CSS 中使用变量、简单的逻辑程序、函数（如右侧代码编辑器中就使用了变量$color）等等在编程语言中的一些基本特性，可以让 CSS 更加简洁、适应性更强、可读性更佳，更易于代码的维护等诸多好处。</p>
-<p>​            <strong>用我自己的话说</strong>：css预处理器就是一些人为了更方便的编写css而设计出来的语言，从而免去css中的一些弊端。</p>
-<h3 id="css有哪些不便之处❓"><a href="#css有哪些不便之处❓" class="headerlink" title="css有哪些不便之处❓"></a>css有哪些不便之处❓</h3><ol>
-<li>无法嵌套书写，需要重复书写选择</li>
-<li>无变量，使得很多相同的属性要重复书写，导致难以维护</li>
-</ol>
-<h3 id="css预处理机制带来哪些方便之处❓"><a href="#css预处理机制带来哪些方便之处❓" class="headerlink" title="css预处理机制带来哪些方便之处❓"></a>css预处理机制带来哪些方便之处❓</h3><ol>
-<li>可嵌套书写，层级清晰可见， 避免重复书写选择器。</li>
-<li>样式层复用机制，减少代码冗余，提高代码的可维护性。</li>
-</ol>
-<h3 id="有哪些css预处理器（框架）❓"><a href="#有哪些css预处理器（框架）❓" class="headerlink" title="有哪些css预处理器（框架）❓"></a>有哪些css预处理器（框架）❓</h3><ol>
-<li><a href="http://sass-lang.com/" target="_blank" rel="noopener">SASS</a></li>
-<li><a href="http://lesscss.org/" target="_blank" rel="noopener">LESS</a></li>
-<li><a href="http://stylus-lang.com/" target="_blank" rel="noopener">stylus</a></li>
-</ol>
-<h3 id="不同之处有哪些❓"><a href="#不同之处有哪些❓" class="headerlink" title="不同之处有哪些❓"></a>不同之处有哪些❓</h3><ul>
-<li>历史方面</li>
-</ul>
-<blockquote>
-<p><strong>SASS</strong>－－2007年诞生，相对来说最为成熟，更拥有ruby社区的支持和compass这一最强大的css框      架，目前受LESS影响，已经进化到了全面兼容CSS的SCSS。</p>
-<p><strong>LESS</strong>－－2009年诞生，受SASS影响较大，但又实用css的语法，更易上手,在ruby社区之外支持者远超过SASS，其缺点是比起SASS来，可编程功能不够，不过优点是简单和兼容CSS，反过来也影响了SASS演变到了SCSS的时代，著名的Twitter Bootstrap就是采用LESS做底层语言的。</p>
-<p><strong>stylus</strong>－－2010年诞生，来自Node.js社区，主要给Node项目进行css与处理支持,在此社区之内有一定支持者，在广泛的意义上人气还完全不如SASS和LESS。</p>
-</blockquote>
-<ul>
-<li>功能方面</li>
-</ul>
-<blockquote>
-<p>LESS 其实是受Sass 启发儿开发出来的工具 其功能和Sass大致相同，那为什么会有这一代替品的出现呢？其实在上面的已经提到了，以为他语法相对简单更易上手，而且LESS给CSS带来了很多 特性，使得LESS能够和CSS无缝地紧密结合在一起。因此，你可以平滑地由CSS迁移到LESS，如果你只是对使用变量或者操作感兴趣的话，你不需要学习一整门全新的语言。”</p>
-<p>stylus相对前两者较新，可以看官方文档介绍的功能。<br>1.来自NodeJS社区，所以和NodeJS走得很近，与JavaScript联系非常紧密。还有专门JavaScript API：<a href="https://link.zhihu.com/?target=http%3A//learnboost.github.io/stylus/docs/js.html" target="_blank" rel="noopener">http://learnboost.github.io/stylus/docs/js.html</a><br>2.支持Ruby之类等等框架<br>3.更多更强大的支持和功能作者：watership链接：<a href="https://www.zhihu.com/question/20300388/answer/18155157来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。" target="_blank" rel="noopener">https://www.zhihu.com/question/20300388/answer/18155157来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</a></p>
-</blockquote>
-<ul>
-<li>总结</li>
-</ul>
-<blockquote>
-<p>SASS在三者之中历史最久，从功能上来说Sass最多也最全，但是从代码上来看会显得累赘。且项目要依赖Ruby，这一点使得很大一部分人抛弃了他而选择了less，其实一开始less也是基于Ruby开发的，后来逐渐转移到了less.js项目中。Less 从语言特性的设计到功能的健壮程度和另外两者相比都有一些缺陷，但因为 Bootstrap 引入了 Less，导致 Less 在今天还是有很多用户。用 Less 可以满足大多数场景的需求，但相比另外两者，基于 Less 开发类库会复杂得多，实现的代码会比较脏，能实现的功能也会受到 DSL 的制约。比 Stylus 语义更清晰、比 Sass 更接近 CSS 语法，使得刚刚转用 CSS 预编译的开发者能够更平滑地进行切换。Stylus 的语法非常灵活，很多语义都是根据上下文隐含的。基于 Stylus 可以写出非常简洁的代码，但对使用团队的开发素养要求也高，更需要有良好的开发规范或约定。Stylus 是前 Node.js 圈第一大神 <a href="https://github.com/tj/">TJ Holowaychuk</a> 的品对于比较有经验的开发者，用 Stylus 可能更会有一种畅快的感觉。总的来说，三种预处理器百分之七八十的功能是类似的。Less 适合帮助团队更快地上手预处理代码的开发，而 Sass 和 Stylus 的选择上我更偏向于stylus。</p>
-</blockquote>
 
       
     </div>
